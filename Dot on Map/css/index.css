@@ -1,0 +1,142 @@
+body {
+	padding: 15px;
+	background: url('../img/map.png') fixed no-repeat;
+}
+
+.dot {
+	position: absolute;
+	top: 300px;
+	left: 600px;
+	background: #33aaee;
+	box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.5);
+	height: 0;
+	width: 0;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+.dot:before, .dot:after {
+	content: "";
+	position: absolute;
+	border-radius: inherit;
+	height: 0px;
+	width: 0px;
+	border: 3px solid rgba(255, 0, 0, 0.8);
+	box-shadow: 2px, 2px, 2px, rgba(255, 0, 0, 0.4);
+	transform: translate(-50%, -50%);
+	-webkit-animation: pulseInner 3s infinite ease-out;
+	-moz-animation: pulseInner 3s infinite ease-out;
+	animation: pulseInner 3s infinite ease-out;
+}
+
+.dot:after {
+	height: 7px;
+	width: 7px;
+	border: 3px solid rgba(255, 255, 0, 0.8);
+	box-shadow: 2px, 2px, 2px, rgba(0, 0, 255, 0.4);
+	-webkit-animation: pulseOuter 3s infinite ease-out;
+	-moz-animation: pulseOuter 3s infinite ease-out;
+	animation: pulseOuter 3s infinite ease-out;
+}
+
+@-webkit-keyframes pulseInner {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.8;
+	}
+	95% {
+		height: 125px;
+		width: 125px;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes pulseInner {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	95% {
+		height: 125px;
+		width: 125px;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes pulseInner {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	95% {
+		height: 125px;
+		width: 125px;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes pulseOuter {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0
+	}
+	25% {
+		opacity: 1
+	}
+	100% {
+		height: 250px;
+		width: 250px;
+		opacity: 0.2
+	}
+}
+
+@-moz-keyframes pulseOuter {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0
+	}
+	25% {
+		opacity: 1
+	}
+	100% {
+		height: 250px;
+		width: 250px;
+		opacity: 0.2
+	}
+}
+
+@keyframes pulseOuter {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0
+	}
+	25% {
+		opacity: 1
+	}
+	100% {
+		height: 250px;
+		width: 250px;
+		opacity: 0.2
+	}
+}
