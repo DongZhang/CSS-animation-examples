@@ -1,0 +1,123 @@
+.doodle {
+	width: 469px;
+	height: 162px;
+	margin: 100px auto;
+	position: relative;
+}
+
+.doodle label {
+	cursor: pointer;
+	display: inline-block;
+	width: 68px;
+	height: 55px;
+	z-index: 2;
+	position: absolute;
+	top: 55px;
+	left: 201px;
+}
+
+.doodle input {
+	display: none;
+}
+
+.doodle label:after {
+	background-color: rgba(227, 230, 36, 0.3);
+}
+
+.doodle label img {
+	width: 65px;
+	height: 51px;
+	z-index: 0;
+}
+
+.doodle .img-cover {
+	width: 65px;
+	height: 51px;
+	background: rgba(227, 230, 36, 0.3);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.doodle input:checked + label {
+	overflow: hidden;
+}
+
+.doodle input:checked + label img{
+	margin-left: -68px;
+	-webkit-transition: margin 1s ease-in;
+}
+
+.doodle input:unchecked + label img {
+	margin-left: 0;
+}
+
+.animate {
+	height: 100%;
+	width: 100%;
+	background: url(http://www.google.com/logos/2012/muybridge12-hp-f.jpg);
+}
+
+.animate div {
+	width: 67px;
+	height: 54px;
+	position: relative;
+	float: left;
+}
+
+.animate div:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	background-color: rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+	box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.animate .g {
+	background-color: rgba(53, 97, 182, 0.5);
+}
+
+.animate .o {
+	background-color: rgba(230, 43, 36, 0.5);
+}
+
+.animate .l {
+	background-color: rgba(85, 151, 78, 0.6);
+}
+
+.doodle input:checked ~ .animate {
+	-webkit-animation: horse-ride .5s steps(12, end) infinite 5s;
+	-moz-animation: horse-ride .5s steps(12, end) infinite 5s;
+	animation: horse-ride .5s steps(12, end) infinite 5s;
+
+	background-position: -2412px 0;
+	-webkit-transition: all 5s cubic-bezier(.51,.08,1,.15);
+	-moz-transition: all 5s cubic-bezier(.51,.08,1,.15);
+	transition: all 5s cubic-bezier(.51,.08,1,.15);
+}
+
+@-webkit-keyframes horse-ride {
+	0% { background-position: 0 0; }
+	100% { background-position: -804px 0; }
+}
+
+@-moz-keyframes horse-ride {
+	0% { background-position: 0 0; }
+	100% { background-position: -804px 0; }
+}
+
+@keyframes horse-ride {
+	0% { background-position: 0 0; }
+	100% { background-position: -804px 0; }
+}
