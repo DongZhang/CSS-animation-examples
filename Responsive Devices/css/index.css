@@ -1,0 +1,241 @@
+body {
+	background: #f4f4f4;
+	font-size: 100%;
+	color: #666;
+}
+
+#device:before, #device:after, #device span:before, #device span:after {
+	left: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	content: '';
+	display: block;
+	position: absolute;
+
+}
+
+#device, #device:before, #device:after, #device span, #device span:before, #device span:after {
+	-web-kit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+#device {
+	position: relative;
+	margin: 80px auto 0;
+	background-color: #525252;
+}
+
+#device:before {
+	background-color: #ec8277;
+	z-index: 2;
+}
+
+#device:after {
+	background-color: #d2d5d9;
+}
+
+#device span {
+	left: 50%;
+	display: block;
+	position: absolute;
+	top: 0;
+	background-color: #818181;
+	margin: 5px 0 0 -3px;
+	width: 6px;
+	height: 6px;
+	border-radius: 10px;
+}
+
+#device span:before {
+	content: '<HTML>';
+	text-align: center;
+	background-color: #eee;
+	border-top: 8px solid #ddd;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+#device span:after {
+	background-color: #b2b5b9;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 1200px){
+	/* iMac */
+	#device {
+		width: 400px;
+		height: 220px;
+		border-radius: 15px;
+	}
+
+	#device:before {
+		top: 17px;
+		margin: 0 0 0 -183px;
+		height: 186px;
+		width: 366px;
+	}
+
+	#device:after {
+		bottom: -30px;
+		margin: 0 0 0 -45px;
+		height: 15px;
+		width: 80px;
+		background: transparent;
+		border-bottom: 30px solid #d2d5d9;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-radius: 0;
+	}
+
+	#device span:before {
+		height: 92px;
+		top: 20px;
+		width: 300px;
+		margin: 0 0 0 -150px;
+		padding: 65px 0 0 0;
+	}
+
+	#device span:after {
+		top: 244px;
+		height: 6px;
+		width: 100px;
+		margin: 0 0 0 -50px;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	/* MacBook Pro */
+	#device {
+		width: 280px;
+		height: 160px;
+		border-radius: 10px 10px 0 0;
+	}
+
+	#device:before {
+		top: 15px;
+		margin: 0 0 0 -125px;
+		height: 130px;
+		width: 250px;
+	}
+
+	#device:after {
+		bottom: -20px;
+		margin: 0 0 2px -180px;
+		height: 18px;
+		width: 360px;
+		border-radius: 0 0 10px 10px;
+	}
+
+	#device span:before {
+		height: 67px;
+		top: 20px;
+		width: 180px;
+		margin: 0 0 0 -90px;
+		padding: 35px 0 0 0;
+	}
+
+	#device span:after {
+		top: 156px;
+		margin: -1px 0 0 -40px;
+		height: 10px;
+		width: 80px;
+		border-radius: 0 0 5px 5px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+	/* iPad */
+	#device {
+		width: 200px;
+		height: 240px;
+		border-radius: 15px;
+		background-color: #fff;
+		margin: 75px auto 0;
+	}
+
+	#device:before {
+		top: 15px;
+		margin: 1px 0 0 -85px;
+		height: 194px;
+		width: 170px;
+	}
+
+	#device:after {
+		bottom: 5px;
+		margin: 0 0 0 -10px;
+		height: 20px;
+		width: 20px;
+		border-radius: 20px;
+		background-color: #d2d5d9;
+	}
+
+	#device span {
+		background-color: #d2d5d9;
+	}
+
+	#device span:before {
+		height: 112px;
+		top: 11px;
+		width: 170px;
+		margin: 0 0 0 -85px;
+		padding: 75px 0 0 0;
+		box-shadow: 0 0 0;
+	}
+
+	#device span:after {
+		top: 220px;
+		margin: 0;
+		height: 0;
+		border-width: 0 0 0 0;
+		width: 0;
+		background-color: #d2d4d9;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#device {
+		margin: 70px auto 0;
+		width: 130px;
+		height: 220px;
+		border-radius: 15px;
+	}
+
+	#device:before {
+		top: 30px;
+		margin: 1px 0 0 -55px;
+		height: 150px;
+		width: 110px;
+	}
+
+	#device:after {
+		bottom: 10px;
+		margin: 0 0 0 -9px;
+		height: 18px;
+		width: 18px;
+		border-radius: 20px;
+		background-color: #818181;
+	}
+
+	#device span {
+		top: 4px;
+	}
+
+	#device span:before {
+		height: 92px;
+		top: 22px;
+		width: 110px;
+		margin: 0 0 0 -55px;
+		padding: 50px 0 0 0;
+		box-shadow: 0 0 0;
+	}
+
+	#device span:after {
+		top: 12px;
+		margin: 0 0 0 -20px;
+		height: 3px;
+		width: 40px;
+		border-radius: 10px;
+		background-color: #818181;
+	}
+}
